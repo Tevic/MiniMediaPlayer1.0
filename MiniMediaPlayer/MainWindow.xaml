@@ -1,0 +1,128 @@
+﻿<Window x:Class="MiniMediaPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MiniMediaPlayer" Height="600" Width="800" WindowStyle="SingleBorderWindow" MinWidth="800" MinHeight="600" WindowStartupLocation="CenterScreen" Icon="/MiniMediaPlayer;component/Images/Windows%20Media%20Player.ico" ResizeMode="CanResizeWithGrip" Loaded="Window_Loaded" Background="Black">
+    <Grid>
+        <MediaElement Name="mediaElement1" Margin="0,0,0,111" PreviewMouseLeftButtonDown="mediaElement1_PreviewMouseLeftButtonDown" UnloadedBehavior="Manual" LoadedBehavior="Manual" Volume="0.2"  />
+        <Button Content="Play" FontSize="28" FontWeight="Bold" Height="48" IsEnabled="False" Margin="308,0,0,12" Name="buttonPlay" VerticalAlignment="Bottom" Click="buttonPlay_Click" HorizontalAlignment="Left" Width="90">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="White" Offset="0.5" />
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="WhiteSmoke" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="Black" Offset="0.497" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="&lt;&lt;" FontSize="40" FontWeight="Bold" Foreground="Black" Height="48" Margin="212,0,0,12" Name="buttonBack" VerticalAlignment="Bottom" Click="buttonBack_Click" HorizontalAlignment="Left" Width="90">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="White" Offset="0.5" />
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="WhiteSmoke" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="Black" Offset="0.497" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="&gt;&gt;" FontSize="40" FontWeight="Bold" Foreground="Black" Height="48" Margin="404,0,0,12" Name="buttonForward" VerticalAlignment="Bottom" Click="buttonForward_Click" HorizontalAlignment="Left" Width="90">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="White" Offset="0.5" />
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="WhiteSmoke" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="Black" Offset="0.497" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Open" FontSize="28" FontWeight="Bold" Foreground="Green" Margin="116,0,0,12" Name="buttonOpen" Height="48" VerticalAlignment="Bottom" Click="buttonOpen_Click" HorizontalAlignment="Left" Width="90">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="White" Offset="0.5" />
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="WhiteSmoke" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="Black" Offset="0.497" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Stop" FontSize="28" FontWeight="Bold" Foreground="Red" Height="48" Margin="498,0,0,12" Name="buttonStop" VerticalAlignment="Bottom" Click="buttonStop_Click" HorizontalAlignment="Left" Width="90">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="White" Offset="0.5" />
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="WhiteSmoke" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="Black" Offset="0.497" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Slider Height="20" Margin="88,0,0,85" Name="sliderVolume" SmallChange="0.01" Value="{Binding Path=Volume, ElementName=mediaElement1}" VerticalAlignment="Bottom" Maximum="1" LargeChange="0.1" HorizontalAlignment="Left" Width="500" Background="{x:Null}" ToolTip="Volume" ValueChanged="sliderVolume_ValueChanged" PreviewMouseLeftButtonDown="sliderVolume_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="sliderVolume_PreviewMouseLeftButtonUp"></Slider>
+        <Slider Height="20" Margin="88,0,0,64" Name="sliderProgress" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="500" SmallChange="0.01" Maximum="1" LargeChange="0.1" ValueChanged="sliderProgress_ValueChanged" PreviewMouseLeftButtonDown="sliderProgress_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="sliderProgress_PreviewMouseLeftButtonUp" >
+            <Slider.Background>
+                <ImageBrush />
+            </Slider.Background>
+        </Slider>
+        <TextBox Margin="594,0,0,12" Name="textBox1" Height="93" VerticalAlignment="Bottom" Foreground="#FFFF19F2" FontWeight="Bold" Text="" FontSize="18" TextAlignment="Center" TextWrapping="NoWrap" FontStyle="Normal" FontFamily="Microsoft YaHei" FontStretch="Normal" IsEnabled="True" IsReadOnly="True" HorizontalAlignment="Left" Width="184">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="White" Offset="0.5" />
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="WhiteSmoke" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="Black" Offset="0.497" />
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBlock FontSize="15" FontWeight="Bold" Height="20" Margin="12,0,0,85" Name="textBlock1" Text="Volume" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="70" PreviewMouseLeftButtonDown="textBlock1_PreviewMouseLeftButtonDown" ToolTip="Click To Mute"><TextBlock.Foreground><LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5"><GradientStop Color="#FF00F806" Offset="0" /><GradientStop Color="Red" Offset="1" /></LinearGradientBrush></TextBlock.Foreground></TextBlock>
+        <TextBlock FontSize="15" FontWeight="Bold" Height="20" Margin="12,0,0,64" Name="textBlock2" Text="Progress" TextTrimming="None" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="70"><TextBlock.Foreground><LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5"><GradientStop Color="#FFE809B3" Offset="0" /><GradientStop Color="#FF16E2F5" Offset="1" /></LinearGradientBrush></TextBlock.Foreground></TextBlock>
+        <Button Content="About" HorizontalAlignment="Left" Name="button1" Width="98" FontWeight="Bold" FontSize="28" FontStyle="Italic" Click="button1_Click" Height="48" VerticalAlignment="Bottom" Margin="12,0,0,12">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="White" Offset="0.5" />
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="WhiteSmoke" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                    <GradientStop Color="Black" Offset="0.497" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

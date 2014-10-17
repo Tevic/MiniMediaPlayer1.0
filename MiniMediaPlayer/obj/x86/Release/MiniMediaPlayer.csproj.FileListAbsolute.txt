@@ -1,0 +1,13 @@
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\bin\Release\MiniMediaPlayer.exe
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\bin\Release\MiniMediaPlayer.pdb
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\MainWindow.baml
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\MainWindow.g.cs
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\App.g.cs
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\MiniMediaPlayer_MarkupCompile.cache
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\MiniMediaPlayer.g.resources
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\MiniMediaPlayer.Properties.Resources.resources
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\MiniMediaPlayer.exe
+D:\Course\C#\MiniMediaPlayer\MiniMediaPlayer\obj\x86\Release\MiniMediaPlayer.pdb
